@@ -21,6 +21,7 @@ A **Bloom filter** is a space-efficient, probabilistic data structure used to te
 - **Possible false positives**: If the filter says an element _is present_, it might actually not be — there's a tunable probability of error.
 - **Space efficient**: Uses a bit array instead of storing actual elements, making it much smaller than the underlying set.
 - **No deletions** (in the basic version): You cannot remove an element once added, since bits may be shared between multiple elements. (A _Counting Bloom Filter_ variant supports deletion.)
+- - **Constant-time operations**: Both insert and lookup take O(k) time, where k is the number of hash functions, no matter how many elements are stored.
 
 ### How It Works
 
